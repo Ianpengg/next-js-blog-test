@@ -8,7 +8,7 @@ import ThemeToggle,{ThemeToggleMobile} from "./ThemeToggle";
 import Link from "next/link";
 
 
-export default function Navbar({}) {
+export default function Navbar({setNav}) {
   function useScrollDirection() {
     const [scrollDirection, setScrollDirection] = useState(null);
   
@@ -33,13 +33,12 @@ export default function Navbar({}) {
   };
   const scrollDirection = useScrollDirection();
 
-  const [nav, setNav] = useState(false)
+  const [nav, setNavi] = useState(false)
 
   const handleNav = () => {
+    setNavi(!nav)
     setNav(!nav)
-    console.log("navbar:", nav)
   }
-
   return (
     <header className={`sticky ${scrollDirection === 'down' ? '-top-24' : 'top-0'} mb-4 z-40 w-full backdrop-blur flex-none transition-transform duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] 
     bg-white/80 dark:bg-[#0e0e10] `}>

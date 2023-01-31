@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
 import React from 'react'
-import Head from "next/head";
-export default function Layout({children}) {
+
+export default function Layout({children, nav, setNav}) {
   return (
-    
       <>
-        <Navbar /> 
-        <main className="container mx-auto flex-1 dark:text-slate-200 ">
+        <Navbar setNav={setNav}/> 
+        <main className={`container mx-auto flex-1 dark:text-slate-200 ${nav ? 'hidden' : ''}`}>
           {children}  
         </main>
+
         <footer className="dark:bg-black bg-white/80 mt-8 py-4 dark:text-slate-200">
           <div className="container mx-auto flex justify-center">
             &copy; 2023 Ian Peng    
