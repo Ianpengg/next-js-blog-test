@@ -1,9 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 
+import React from "react";
 
-export default function Home({ }) {
+export default function project({}) {
   return (
     <div>
       <div
@@ -11,9 +9,11 @@ export default function Home({ }) {
     max-w-full justify-evenly mx-auto items-center z-0"
       >
         <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-          Home
+          Projects
         </h3>
       </div>
     </div>
-  )
+  );
 }
+
+

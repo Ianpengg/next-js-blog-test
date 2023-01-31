@@ -6,10 +6,6 @@ export default function Layout({children}) {
   return (
     
       <>
-        <Head>
-          <title>Ian website</title>
-          <link rel="icon" href="/images/favicon.ico"/>
-        </Head>
         <Navbar /> 
         <main className="container mx-auto flex-1 dark:text-slate-200 ">
           {children}  
