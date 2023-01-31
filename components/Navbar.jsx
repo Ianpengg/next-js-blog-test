@@ -126,7 +126,7 @@ export default function Navbar({}) {
               <Link onClick={handleNav} href='/blog'>
                 <li className="py-4 text-sm hover:text-sky-500">Project</li>
               </Link>
-              <Link href='/'>
+              <Link onClick={handleNav} href='/'>
                 <li className="py-4 text-sm hover:text-sky-500">Contact</li>
               </Link>
             </ul>
