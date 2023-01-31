@@ -58,6 +58,14 @@ export default function Navbar({}) {
             <div className="relative hidden md:flex items-center ml-auto">
               <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
                 <ul className="flex space-x-8 text-base">
+                <li>
+                    <Link
+                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      href="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       className="hover:text-sky-500 dark:hover:text-sky-400"
@@ -75,12 +83,12 @@ export default function Navbar({}) {
                     </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="/showcase"
+                      href="/project"
                     >
                       Projects
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -118,7 +126,7 @@ export default function Navbar({}) {
               <Link onClick={handleNav} href='/blog'>
                 <li className="py-4 text-sm hover:text-sky-500">Project</li>
               </Link>
-              <Link href='/contact'>
+              <Link href='/'>
                 <li className="py-4 text-sm hover:text-sky-500">Contact</li>
               </Link>
             </ul>
