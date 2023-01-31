@@ -1,0 +1,8 @@
+<ThemeProvider>
+  <Layout>
+    <Component {...pageProps} />
+    // this would be the components we want to render
+    ex: 
+    Home, Project, aboutme Contact
+  <Layout>
+<ThemeProvider>
