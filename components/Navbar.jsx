@@ -6,7 +6,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import ThemeToggle,{ThemeToggleMobile} from "./ThemeToggle";
 import Link from "next/link";
-import Switch from "react-switch";
+
 
 export default function Navbar({}) {
   function useScrollDirection() {
