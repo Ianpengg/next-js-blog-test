@@ -23,7 +23,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ posts }) {
+export default function Blog({ posts }) {
   return (
     <div className="h-screen overflow-y-scroll">
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0 '>
