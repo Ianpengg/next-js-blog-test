@@ -1,11 +1,15 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
 import React from 'react'
-
+import Head from "next/head";
 export default function Layout({children}) {
   return (
     
       <>
+        <Head>
+          <title>Ian website</title>
+          <link rel="icon" href="/images/favicon.ico"/>
+        </Head>
         <Navbar /> 
         <main className="container mx-auto flex-1 dark:text-slate-200 ">
           {children}  
