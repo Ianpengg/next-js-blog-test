@@ -40,7 +40,10 @@ export default function Navbar({setNav}) {
     setNav(!nav)
   }
   return (
-    <header className={`sticky ${scrollDirection === 'down' ? '-top-24' : 'top-0'} mb-4 z-40 w-full backdrop-blur flex-none transition-transform duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] 
+    <header className={`sticky 
+    ${ !nav && scrollDirection === 'down' ? 'md:-top-24 top-0' : 'top-0'
+    }
+    mb-4 z-999 w-full backdrop-blur flex-none transition-transform duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] 
     bg-white/80 dark:bg-[#0e0e10] `}>
       <div className="max-w-[90rem] mx-auto">
         <div className="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
@@ -101,11 +104,11 @@ export default function Navbar({setNav}) {
             </div>
           </div>
         </div>
-        <div className={ nav ? 'fixed left-0 top-18 w-full h-screen' : 'hidden'}>
+        <div className={ nav ? 'fixed left-0 top-16 bottom-10 w-full ' : 'hidden'}>
           {/* Navbar expand page */}
           <div className={ 
             nav
-            ? "fixed left-0 top-18 w-screen h-screen bg-white dark:bg-black p-10"
+            ? "fixed left-0 w-screen top-16  bg-white dark:bg-[#0e0e10] p-10"
             : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
           <div>
             <div className="flex w-full items-center justify-between">
@@ -130,7 +133,7 @@ export default function Navbar({setNav}) {
               </Link>
             </ul>
             <ThemeToggleMobile className="mt-15 font-bold text-sm"/>
-            <div className="pt-60">
+            <div className="pt-[160px]">
               <p className="uppercase tracking-widest items-center justify-center text-center text-black dark:text-white/80">
                 Let&prime;s connect
               </p>

@@ -10,7 +10,7 @@ export default function Layout({children, nav, setNav}) {
           {children}  
         </main>
 
-        <footer className="dark:bg-black bg-white/80 mt-8 py-4 dark:text-slate-200">
+        <footer className={`dark:bg-black bg-white/80 mt-8 py-4 dark:text-slate-200 ${nav ? 'hidden' : ''}`}>
           <div className="container mx-auto flex justify-center">
             &copy; 2023 Ian Peng    
           </div>

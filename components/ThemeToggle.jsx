@@ -8,6 +8,19 @@ import Switch from "react-switch";
 export default function ThemeToggle({}) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    const usertheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    if (usertheme === "dark" || (!usertheme && prefersDark)) {
+      setTheme('dark');
+      console.log(usertheme);
+    }
+    else {
+      setTheme('light');
+    }
+  }, []);
 
   useEffect(() => {
     setMounted(true);
